@@ -9,7 +9,7 @@ const initialState = {
 export const increment = createAction('INCREMENT');
 export const decrement = createAction('DECREMENT');
 
-export default createReducer({
+export default createReducer(initialState, {
   [increment]: function (state) {
     state.count = state.count + 1;
   },
@@ -18,5 +18,3 @@ export default createReducer({
     state.count = state.count - 1;
   }
 })
-
-console.log(decrement);
